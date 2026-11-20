@@ -17,6 +17,10 @@ Entry for the make.fun competition `news-image-20261120`.
   schools, 34 German cities, a general strike in Italy. (ZeroFox, 20 Nov 2026)
 - **GTA 6 sales already pass $1.8bn**, overtaking The Odyssey's global run.
   (Mezha, 20 Nov 2026)
+- **Sport brief — Phillips' 118 makes history in Wellington.** First player to
+  score centuries against India in Tests, ODIs and T20s in one calendar year;
+  New Zealand pass 300 on day two, Henry Nicholls 146 not out.
+  (ICC / Cricbuzz, day two, 20 Nov 2026)
 
 ## How it works
 

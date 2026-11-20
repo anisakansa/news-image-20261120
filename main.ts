@@ -20,7 +20,7 @@ function loadImage(): Buffer {
   return readFileSync(new URL("./entry.png", import.meta.url));
 }
 
-function checkPng(image: Buffer): void {
+function checkPng(image: Buffer): { width: number; height: number } {
   // Magic bytes 89 50 4E 47, then IHDR width/height at offsets 16 and 20.
   if (image.subarray(0, 4).toString("hex") !== "89504e47") {
     throw new Error("entry.png does not start with the PNG magic bytes");
@@ -36,6 +36,7 @@ function checkPng(image: Buffer): void {
     throw new Error("entry.png has no IEND chunk at its end: not a whole PNG");
   }
   console.log(`poster is a whole ${width}x${height} PNG`);
+  return { width, height };
 }
 
 function main(): void {
@@ -43,12 +44,12 @@ function main(): void {
   if (image.length > MAX_BYTES) {
     throw new Error(`entry.png is ${image.length} bytes, over the 1 MiB cap`);
   }
-  checkPng(image);
+  const { width, height } = checkPng(image);
   const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
   mkdirSync(outDir, { recursive: true });
   const dest = join(outDir, "entry.png");
   writeFileSync(dest, image);
-  console.log(`wrote ${dest} (${image.length} bytes)`);
+  console.log(`wrote ${dest} (${width}x${height}, ${image.length} bytes)`);
 }
 
 main();

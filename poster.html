@@ -20,12 +20,12 @@
   }
   .masthead .title {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 56px; line-height: 0.95; letter-spacing: 1px; font-weight: bold;
+    font-size: 50px; line-height: 0.95; letter-spacing: 1px; font-weight: bold;
   }
   .masthead .title em { color: #e8b64c; font-style: normal; }
   .masthead .datebox { text-align: right; }
-  .masthead .datebox .day { font-size: 21px; font-weight: bold; letter-spacing: 3px; color: #e8b64c; }
-  .masthead .datebox .ed { font-size: 13px; letter-spacing: 4px; margin-top: 5px; color: #c9d4e2; }
+  .masthead .datebox .day { font-size: 19px; font-weight: bold; letter-spacing: 2px; color: #e8b64c; }
+  .masthead .datebox .ed { font-size: 11px; letter-spacing: 3px; margin-top: 5px; color: #c9d4e2; }
   .goldrule { height: 5px; background: #e8b64c; }
 
   .body { padding: 20px 38px 0; display: flex; flex-direction: column; flex: 1; }
@@ -39,9 +39,9 @@
   .kicker.teal { color: #0f6b5c; }
   .lead h1 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 47px; line-height: 1.06; margin-top: 7px;
+    font-size: 50px; line-height: 1.06; margin-top: 7px;
   }
-  .lead p { font-size: 19px; line-height: 1.42; margin-top: 10px; color: #2b2b2b; }
+  .lead p { font-size: 20px; line-height: 1.42; margin-top: 10px; color: #2b2b2b; }
 
   /* ---- three-column grid ---- */
   .trio {
@@ -51,9 +51,18 @@
   .trio article + article { border-left: 1px solid #b9ad93; padding-left: 26px; }
   .trio h2 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 24px; line-height: 1.16; margin-top: 6px;
+    font-size: 30px; line-height: 1.16; margin-top: 6px;
   }
-  .trio p { font-size: 15.5px; line-height: 1.42; margin-top: 8px; color: #2b2b2b; }
+  .trio p { font-size: 18px; line-height: 1.5; margin-top: 9px; color: #2b2b2b; }
+
+  /* ---- sport brief, one line of the day's play ---- */
+  .briefs { padding: 13px 2px 12px; border-bottom: 2px solid #16283e; }
+  .briefs .kicker { display: inline; }
+  .briefs h3 {
+    display: inline; font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 21px; line-height: 1.2; margin-left: 10px;
+  }
+  .briefs p { font-size: 16px; line-height: 1.4; margin-top: 6px; color: #2b2b2b; }
 
   /* ---- lower band: two short items in a tinted box ---- */
   .band {
@@ -64,9 +73,9 @@
   .band article + article { border-left: 1px solid #b9ad93; padding-left: 20px; margin-left: 20px; }
   .band h3 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 21px; line-height: 1.15; margin-top: 4px;
+    font-size: 23px; line-height: 1.15; margin-top: 4px;
   }
-  .band p { font-size: 14.5px; line-height: 1.35; margin-top: 5px; color: #2b2b2b; }
+  .band p { font-size: 15.5px; line-height: 1.38; margin-top: 5px; color: #2b2b2b; }
 
   .foot {
     margin-top: 14px; padding-bottom: 16px;
@@ -108,6 +117,12 @@
         <h2>Engine fault ends Japan&rsquo;s Hayabusa2 asteroid landing</h2>
         <p>JAXA abandons the planned touchdown after engine trouble, and must rework the probe&rsquo;s mission in deep space.</p>
       </article>
+    </div>
+
+    <div class="briefs">
+      <div class="kicker teal">SPORT &middot; CRICKET</div>
+      <h3>Phillips&rsquo; 118 makes history in Wellington</h3>
+      <p>Glenn Phillips becomes the first player to score centuries against India in Tests, one-dayers and T20s in one calendar year, as New Zealand pass 300 on day two of the first Test; Henry Nicholls is 146 not out.</p>
     </div>
 
     <div class="band">
