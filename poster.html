@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World Today — Friday 20 November 2026</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1024px; height: 1024px; overflow: hidden;
+    background: #f6f1e6; color: #1b1b1b;
+    font-family: "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+  }
+  .page { width: 1024px; height: 1024px; display: flex; flex-direction: column; }
+
+  /* ---- masthead: dark navy band, title left, date right ---- */
+  .masthead {
+    background: #16283e; color: #f6f1e6;
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding: 20px 38px 16px;
+  }
+  .masthead .title {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 56px; line-height: 0.95; letter-spacing: 1px; font-weight: bold;
+  }
+  .masthead .title em { color: #e8b64c; font-style: normal; }
+  .masthead .datebox { text-align: right; }
+  .masthead .datebox .day { font-size: 21px; font-weight: bold; letter-spacing: 3px; color: #e8b64c; }
+  .masthead .datebox .ed { font-size: 13px; letter-spacing: 4px; margin-top: 5px; color: #c9d4e2; }
+  .goldrule { height: 5px; background: #e8b64c; }
+
+  .body { padding: 20px 38px 0; display: flex; flex-direction: column; flex: 1; }
+
+  /* ---- lead story, full width ---- */
+  .lead { padding-bottom: 16px; border-bottom: 3px double #16283e; }
+  .kicker {
+    font-size: 13px; font-weight: bold; letter-spacing: 3px; color: #b3261e;
+  }
+  .kicker.blue { color: #2e5f7a; }
+  .kicker.teal { color: #0f6b5c; }
+  .lead h1 {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 47px; line-height: 1.06; margin-top: 7px;
+  }
+  .lead p { font-size: 19px; line-height: 1.42; margin-top: 10px; color: #2b2b2b; }
+
+  /* ---- three-column grid ---- */
+  .trio {
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 26px;
+    padding: 16px 0 14px; border-bottom: 2px solid #16283e; flex: 1;
+  }
+  .trio article + article { border-left: 1px solid #b9ad93; padding-left: 26px; }
+  .trio h2 {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 24px; line-height: 1.16; margin-top: 6px;
+  }
+  .trio p { font-size: 15.5px; line-height: 1.42; margin-top: 8px; color: #2b2b2b; }
+
+  /* ---- lower band: two short items in a tinted box ---- */
+  .band {
+    background: #ece3cd; border: 1px solid #b9ad93;
+    display: flex; margin-top: 16px; padding: 14px 18px;
+  }
+  .band article { flex: 1; }
+  .band article + article { border-left: 1px solid #b9ad93; padding-left: 20px; margin-left: 20px; }
+  .band h3 {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 21px; line-height: 1.15; margin-top: 4px;
+  }
+  .band p { font-size: 14.5px; line-height: 1.35; margin-top: 5px; color: #2b2b2b; }
+
+  .foot {
+    margin-top: 14px; padding-bottom: 16px;
+    font-size: 12px; letter-spacing: 2px; color: #6d6350; text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="masthead">
+    <div class="title">THE WORLD <em>TODAY</em></div>
+    <div class="datebox">
+      <div class="day">FRIDAY 20 NOVEMBER 2026</div>
+      <div class="ed">ONE DAY &middot; ONE PAGE &middot; EVENING EDITION</div>
+    </div>
+  </div>
+  <div class="goldrule"></div>
+
+  <div class="body">
+    <section class="lead">
+      <div class="kicker">WASHINGTON &middot; IRAN</div>
+      <h1>Trump puts Iran war decision off until 2027</h1>
+      <p>The president says there is &ldquo;no rush&rdquo; and he will &ldquo;see what happens&rdquo; after 1 January, pushing any decision on striking Iran into next year as diplomats keep working on a deal.</p>
+    </section>
+
+    <div class="trio">
+      <article>
+        <div class="kicker blue">EUROPE &middot; UKRAINE</div>
+        <h2>Europe &ldquo;ready for talks&rdquo; with Russia to end the Ukraine war</h2>
+        <p>European leaders say they are prepared to negotiate with Moscow, the clearest signal yet of a diplomatic opening after years of fighting.</p>
+      </article>
+      <article>
+        <div class="kicker">INDIA &middot; WEATHER</div>
+        <h2>300,000 evacuated as Cyclone Akvan strikes India&rsquo;s east coast</h2>
+        <p>The storm makes landfall in Odisha with 423 rescue teams deployed, schools shut and trains cancelled along the coast.</p>
+      </article>
+      <article>
+        <div class="kicker teal">SPACE &middot; JAPAN</div>
+        <h2>Engine fault ends Japan&rsquo;s Hayabusa2 asteroid landing</h2>
+        <p>JAXA abandons the planned touchdown after engine trouble, and must rework the probe&rsquo;s mission in deep space.</p>
+      </article>
+    </div>
+
+    <div class="band">
+      <article>
+        <div class="kicker blue">EUROPE &middot; PROTEST</div>
+        <h3>Gen Z walkouts sweep Europe</h3>
+        <p>Students walk out in more than 200 British schools and 34 German cities, with a general strike in Italy, in a coordinated International Youth Strike.</p>
+      </article>
+      <article>
+        <div class="kicker">CULTURE &middot; GAMES</div>
+        <h3>GTA 6 sales already pass $1.8bn</h3>
+        <p>Rockstar&rsquo;s sequel overtakes The Odyssey&rsquo;s entire global box-office run within a day of launch.</p>
+      </article>
+    </div>
+
+    <div class="foot">HEADLINES AS REPORTED ON FRIDAY 20 NOVEMBER 2026 &middot; COMPILED FROM WIRE AND PRESS REPORTS OF THE DAY</div>
+  </div>
+</div>
+</body>
+</html>
