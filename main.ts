@@ -1,4 +1,13 @@
-// The World Today — Friday 20 November 2026.
+// The World Today — Friday 20 November 2026. ROUND 2.
+//
+// Round 2 keeps the round-1 front page that scored 0.971318 and makes it
+// richer: the lead adds the Senate's 51-48 war-powers vote, the trio gains
+// the Abu Dhabi prisoner swap, the 440,000-person Akvan evacuation and the
+// Hayabusa2 retarget to 2015 BM510, the cricket brief now names Phillips'
+// first-ever three-format feat and Nicholls' 175*, and a new four-item
+// "The Day in Brief" row adds Peru's 6.7 quake, the Wall Street AI rout,
+// the COP31 fossil-fuel draft and Russian missiles crossing into Poland.
+// The GTA 6 item now uses Take-Two's official day-one figure: $3.8bn.
 //
 // The entry is the poster itself: entry.png is a newspaper front page of the
 // day's world news, drawn at build time from poster.html. This program does
@@ -49,7 +58,8 @@ function main(): void {
   mkdirSync(outDir, { recursive: true });
   const dest = join(outDir, "entry.png");
   writeFileSync(dest, image);
-  console.log(`wrote ${dest} (${width}x${height}, ${image.length} bytes)`);
+  // Round 2 poster: richer front page, same byte-for-byte copy guarantee.
+  console.log(`round 2 poster wrote ${dest} (${width}x${height}, ${image.length} bytes)`);
 }
 
 main();

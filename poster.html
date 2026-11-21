@@ -16,7 +16,7 @@
   .masthead {
     background: #16283e; color: #f6f1e6;
     display: flex; justify-content: space-between; align-items: flex-end;
-    padding: 20px 38px 16px;
+    padding: 18px 38px 14px;
   }
   .masthead .title {
     font-family: "DejaVu Serif", Georgia, serif;
@@ -28,57 +28,74 @@
   .masthead .datebox .ed { font-size: 11px; letter-spacing: 3px; margin-top: 5px; color: #c9d4e2; }
   .goldrule { height: 5px; background: #e8b64c; }
 
-  .body { padding: 20px 38px 0; display: flex; flex-direction: column; flex: 1; }
+  .body { padding: 12px 38px 0; display: flex; flex-direction: column; flex: 1; }
 
   /* ---- lead story, full width ---- */
-  .lead { padding-bottom: 16px; border-bottom: 3px double #16283e; }
+  .lead { padding-bottom: 10px; border-bottom: 3px double #16283e; }
   .kicker {
     font-size: 13px; font-weight: bold; letter-spacing: 3px; color: #b3261e;
   }
   .kicker.blue { color: #2e5f7a; }
   .kicker.teal { color: #0f6b5c; }
+  .kicker.gold { color: #8a6d1f; }
   .lead h1 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 50px; line-height: 1.06; margin-top: 7px;
+    font-size: 46px; line-height: 1.05; margin-top: 6px;
   }
-  .lead p { font-size: 20px; line-height: 1.42; margin-top: 10px; color: #2b2b2b; }
+  .lead p { font-size: 18px; line-height: 1.38; margin-top: 8px; color: #2b2b2b; }
+  .lead p .stand { font-weight: bold; color: #16283e; }
 
   /* ---- three-column grid ---- */
   .trio {
     display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 26px;
-    padding: 16px 0 14px; border-bottom: 2px solid #16283e; flex: 1;
+    padding: 10px 0 9px; border-bottom: 2px solid #16283e;
   }
   .trio article + article { border-left: 1px solid #b9ad93; padding-left: 26px; }
   .trio h2 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 30px; line-height: 1.16; margin-top: 6px;
+    font-size: 26px; line-height: 1.15; margin-top: 5px;
   }
-  .trio p { font-size: 18px; line-height: 1.5; margin-top: 9px; color: #2b2b2b; }
+  .trio p { font-size: 16px; line-height: 1.42; margin-top: 7px; color: #2b2b2b; }
 
-  /* ---- sport brief, one line of the day's play ---- */
-  .briefs { padding: 13px 2px 12px; border-bottom: 2px solid #16283e; }
+  /* ---- sport brief ---- */
+  .briefs { padding: 9px 2px 8px; border-bottom: 2px solid #16283e; }
   .briefs .kicker { display: inline; }
   .briefs h3 {
     display: inline; font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 21px; line-height: 1.2; margin-left: 10px;
+    font-size: 20px; line-height: 1.2; margin-left: 10px;
   }
-  .briefs p { font-size: 16px; line-height: 1.4; margin-top: 6px; color: #2b2b2b; }
+  .briefs p { font-size: 15px; line-height: 1.36; margin-top: 4px; color: #2b2b2b; }
+
+  /* ---- the day in brief: four compact items ---- */
+  .daybrief { padding: 9px 0 9px; border-bottom: 2px solid #16283e; }
+  .daybrief .dbhead {
+    font-size: 12px; font-weight: bold; letter-spacing: 3px; color: #16283e;
+    margin-bottom: 8px;
+  }
+  .dbgrid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0 20px; }
+  .dbgrid article + article { border-left: 1px solid #b9ad93; padding-left: 20px; }
+  .dbgrid .kicker { font-size: 11.5px; letter-spacing: 2px; }
+  .dbgrid h4 {
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 17px; line-height: 1.18; margin-top: 4px;
+  }
+  .dbgrid p { font-size: 13.5px; line-height: 1.36; margin-top: 4px; color: #2b2b2b; }
 
   /* ---- lower band: two short items in a tinted box ---- */
   .band {
     background: #ece3cd; border: 1px solid #b9ad93;
-    display: flex; margin-top: 16px; padding: 14px 18px;
+    display: flex; margin-top: 10px; padding: 10px 18px;
   }
   .band article { flex: 1; }
   .band article + article { border-left: 1px solid #b9ad93; padding-left: 20px; margin-left: 20px; }
   .band h3 {
     font-family: "DejaVu Serif", Georgia, serif;
-    font-size: 23px; line-height: 1.15; margin-top: 4px;
+    font-size: 20px; line-height: 1.15; margin-top: 3px;
   }
-  .band p { font-size: 15.5px; line-height: 1.38; margin-top: 5px; color: #2b2b2b; }
+  .band p { font-size: 14px; line-height: 1.34; margin-top: 4px; color: #2b2b2b; }
 
   .foot {
-    margin-top: 14px; padding-bottom: 16px;
+    margin-top: 9px; padding-bottom: 12px;
     font-size: 12px; letter-spacing: 2px; color: #6d6350; text-align: center;
   }
 </style>
@@ -98,43 +115,69 @@
     <section class="lead">
       <div class="kicker">WASHINGTON &middot; IRAN</div>
       <h1>Trump puts Iran war decision off until 2027</h1>
-      <p>The president says there is &ldquo;no rush&rdquo; and he will &ldquo;see what happens&rdquo; after 1 January, pushing any decision on striking Iran into next year as diplomats keep working on a deal.</p>
+      <p><span class="stand">&ldquo;We&rsquo;ve got time.&rdquo;</span> The president says he is in &ldquo;no rush&rdquo; and will &ldquo;see what happens&rdquo; after 1 January, pushing any decision on new strikes against Iran into next year &mdash; as the Senate votes 51&ndash;48 against curbing his war powers and Israel presses him to act sooner.</p>
     </section>
 
     <div class="trio">
       <article>
         <div class="kicker blue">EUROPE &middot; UKRAINE</div>
-        <h2>Europe &ldquo;ready for talks&rdquo; with Russia to end the Ukraine war</h2>
-        <p>European leaders say they are prepared to negotiate with Moscow, the clearest signal yet of a diplomatic opening after years of fighting.</p>
+        <h2>Europe &ldquo;ready for talks&rdquo; with Russia on Ukraine</h2>
+        <p>Leaders at Berlin&rsquo;s Coalition of the Willing summit agree a united negotiating position, days after US-brokered talks in Abu Dhabi produced a prisoner exchange.</p>
       </article>
       <article>
         <div class="kicker">INDIA &middot; WEATHER</div>
-        <h2>300,000 evacuated as Cyclone Akvan strikes India&rsquo;s east coast</h2>
-        <p>The storm makes landfall in Odisha with 423 rescue teams deployed, schools shut and trains cancelled along the coast.</p>
+        <h2>440,000 evacuated as Cyclone Akvan hits India&rsquo;s coast</h2>
+        <p>The storm makes landfall near Gopalpur in Odisha with 423 rescue teams deployed, schools shut and trains cancelled &mdash; and no major damage reported.</p>
       </article>
       <article>
         <div class="kicker teal">SPACE &middot; JAPAN</div>
-        <h2>Engine fault ends Japan&rsquo;s Hayabusa2 asteroid landing</h2>
-        <p>JAXA abandons the planned touchdown after engine trouble, and must rework the probe&rsquo;s mission in deep space.</p>
+        <h2>Engine fault ends Hayabusa2 asteroid landing</h2>
+        <p>JAXA abandons the 2031 touchdown on asteroid 1998 KY26 after its ion engines fail, and retargets the probe for a high-speed flyby of 2015 BM510 in 2028.</p>
       </article>
     </div>
 
     <div class="briefs">
       <div class="kicker teal">SPORT &middot; CRICKET</div>
       <h3>Phillips&rsquo; 118 makes history in Wellington</h3>
-      <p>Glenn Phillips becomes the first player to score centuries against India in Tests, one-dayers and T20s in one calendar year, as New Zealand pass 300 on day two of the first Test; Henry Nicholls is 146 not out.</p>
+      <p>Glenn Phillips becomes the first batter ever to score centuries against India in Tests, one-dayers and T20s in a single calendar year; Henry Nicholls finishes 175 not out as New Zealand make 368 in the first Test.</p>
+    </div>
+
+    <div class="daybrief">
+      <div class="dbhead">THE DAY IN BRIEF</div>
+      <div class="dbgrid">
+        <article>
+          <div class="kicker">PERU &middot; QUAKE</div>
+          <h4>6.7 quake shakes the Andes</h4>
+          <p>A magnitude 6.7 tremor rattles central Peru and is felt in Lima; no deaths reported.</p>
+        </article>
+        <article>
+          <div class="kicker blue">MARKETS &middot; WALL ST</div>
+          <h4>AI rout sinks Wall Street</h4>
+          <p>S&amp;P 500 falls 3.7% and Nasdaq 5.3% as the AI sell-off deepens; Nvidia drops 14%.</p>
+        </article>
+        <article>
+          <div class="kicker teal">CLIMATE &middot; COP31</div>
+          <h4>Draft drops fossil fuels</h4>
+          <p>Climate talks in Antalya run past deadline after the final draft omits a fossil-fuel phase-out.</p>
+        </article>
+        <article>
+          <div class="kicker gold">POLAND &middot; UKRAINE</div>
+          <h4>Missiles cross into Poland</h4>
+          <p>Russian missiles enter Polish airspace during a massive attack on Ukraine, Kyiv says.</p>
+        </article>
+      </div>
     </div>
 
     <div class="band">
       <article>
         <div class="kicker blue">EUROPE &middot; PROTEST</div>
         <h3>Gen Z walkouts sweep Europe</h3>
-        <p>Students walk out in more than 200 British schools and 34 German cities, with a general strike in Italy, in a coordinated International Youth Strike.</p>
+        <p>Students walk out in more than 25 countries, with a general strike in Italy and marches in 73 German cities, in a coordinated International Youth Strike.</p>
       </article>
       <article>
         <div class="kicker">CULTURE &middot; GAMES</div>
-        <h3>GTA 6 sales already pass $1.8bn</h3>
-        <p>Rockstar&rsquo;s sequel overtakes The Odyssey&rsquo;s entire global box-office run within a day of launch.</p>
+        <h3>GTA 6 sets record: $3.8bn on day one</h3>
+        <p>Take-Two confirms 32.5 million copies sold &mdash; the biggest entertainment launch in history.</p>
       </article>
     </div>
 
