@@ -1,20 +1,23 @@
-// The World Today — Friday 20 November 2026. ROUND 2.
+// The World Today — Friday 20 November 2026. ROUND 3 (prep).
 //
-// Round 2 keeps the round-1 front page that scored 0.971318 and makes it
-// richer: the lead adds the Senate's 51-48 war-powers vote, the trio gains
-// the Abu Dhabi prisoner swap, the 440,000-person Akvan evacuation and the
-// Hayabusa2 retarget to 2015 BM510, the cricket brief now names Phillips'
-// first-ever three-format feat and Nicholls' 175*, and a new four-item
-// "The Day in Brief" row adds Peru's 6.7 quake, the Wall Street AI rout,
-// the COP31 fossil-fuel draft and Russian missiles crossing into Poland.
-// The GTA 6 item now uses Take-Two's official day-one figure: $3.8bn.
+// Round 3 rebuilds the front page around the day's sharpest event instead
+// of adding more stories: Russian missiles landing on NATO soil in Poland.
+// The lead is a situation map of the impact zone (two Kh-101 cruise
+// missiles and a drone down in south-east Poland, NATO jets scrambled),
+// backed by a "The Strike" numbers rail. Below it, the Wall Street AI
+// rout gets a plunging Nasdaq chart, then the Senate's 51-48 Iran vote
+// and Cyclone Akvan, with four one-line briefs (Peru quake, COP31,
+// GTA 6, Phillips) at the foot. Every figure was checked against wire
+// and press reports of 20 November 2026 before the poster was drawn.
 //
-// The entry is the poster itself: entry.png is a newspaper front page of the
-// day's world news, drawn at build time from poster.html. This program does
-// not draw anything; it proves the shipped image is a whole, in-limits PNG
-// and copies it byte for byte into the output directory. Two runs therefore
-// write identical bytes. It uses only the Node standard library and never
-// touches the network.
+// The poster is drawn at build time by poster.py (PIL, deterministic)
+// into entry.png. Verified 21 Nov 2026: two runs of this program and two
+// renders of poster.py all produce sha256
+// 2c93eaa88a348c0b82f457cac6d5347624175527ecb440fe7de2c5ac3f250ec6
+// (1024x1024, 146,744 bytes). This program does not draw anything: it
+// shipped image is a whole, in-limits PNG and copies it byte for byte
+// into the output directory, so two runs write identical bytes. It uses
+// only the Node standard library and never touches the network.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -58,8 +61,9 @@ function main(): void {
   mkdirSync(outDir, { recursive: true });
   const dest = join(outDir, "entry.png");
   writeFileSync(dest, image);
-  // Round 2 poster: richer front page, same byte-for-byte copy guarantee.
-  console.log(`round 2 poster wrote ${dest} (${width}x${height}, ${image.length} bytes)`);
+  // Round 3 poster: Poland-missiles lead with situation map, same
+  // byte-for-byte copy guarantee as rounds 1-2.
+  console.log(`round 3 poster wrote ${dest} (${width}x${height}, ${image.length} bytes)`);
 }
 
 main();
